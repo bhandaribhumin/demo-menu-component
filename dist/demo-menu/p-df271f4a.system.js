@@ -1,0 +1,1 @@
+System.register(["./p-8f5415a2.system.js"],(function(){"use strict";var t,e;return{setters:[function(n){t=n.p;e=n.b}],execute:function(){t().then((function(t){return e([["p-1d19b33d.system",[[1,"test-menu"]]]],t)}))}}}));
