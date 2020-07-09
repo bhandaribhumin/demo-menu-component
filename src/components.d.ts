@@ -20,6 +20,8 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface TestMenu {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +30,15 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLTestMenuElement extends Components.TestMenu, HTMLStencilElement {
+    }
+    var HTMLTestMenuElement: {
+        prototype: HTMLTestMenuElement;
+        new (): HTMLTestMenuElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "test-menu": HTMLTestMenuElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +56,11 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface TestMenu {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "test-menu": TestMenu;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +68,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "test-menu": LocalJSX.TestMenu & JSXBase.HTMLAttributes<HTMLTestMenuElement>;
         }
     }
 }

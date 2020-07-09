@@ -1,4 +1,4 @@
-import { r as registerInstance, h } from './index-6f930438.js';
+import { r as registerInstance, h } from './index-dfde3a0a.js';
 
 function format(first, middle, last) {
     return ((first || '') +
@@ -16,7 +16,7 @@ const MyComponent = class {
         return format(this.first, this.middle, this.last);
     }
     render() {
-        return h("div", null, "Hello, World! I'm ", this.getText());
+        return h("div", null, "Hello, Team! I'm ", this.getText());
     }
 };
 MyComponent.style = myComponentCss;
